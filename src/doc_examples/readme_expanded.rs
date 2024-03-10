@@ -1,10 +1,10 @@
 use dioxus::prelude::*;
 
 fn main() {
-    launch(app);
+    launch(App);
 }
 
-fn app() -> Element {
+fn App() -> Element {
     let mut count = use_signal(|| 0);
 
     // rsx expands to VNode::new
