@@ -11,7 +11,7 @@ async fn connect_to_ws_server() -> impl Stream<Item = ()> {
 // ANCHOR: component
 use futures_util::StreamExt;
 
-fn app() {
+fn App() {
     let ws: Coroutine<()> = use_coroutine(|rx| async move {
         // Connect to some sort of service
         let mut conn = connect_to_ws_server().await;
@@ -120,7 +120,7 @@ fn global() {
     // ANCHOR: global
     static USERNAME: GlobalSignal<String> = Signal::global(|| "default".to_string());
 
-    fn app() -> Element {
+    fn App() -> Element {
         use_coroutine(sync_service);
 
         rsx! { Banner {} }
