@@ -4,7 +4,7 @@ fn main() {
     launch(app);
 }
 
-fn app() -> Element {
+fn App() -> Element {
     // You can create as many eval instances as you want
     let mut eval = eval(
         r#"
