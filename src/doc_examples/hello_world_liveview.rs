@@ -2,10 +2,10 @@
 use dioxus::prelude::*;
 
 fn main() {
-    launch(app);
+    launch(App);
 }
 
-fn app() -> Element {
+fn App() -> Element {
     rsx! { div { "Hello, world!" } }
 }
 // ANCHOR_END: all
