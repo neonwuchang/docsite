@@ -5,7 +5,7 @@ fn main() {
     launch(app);
 }
 
-fn app() -> Element {
+fn App() -> Element {
     rsx! {
         div { img { src: mg!(file("public/static/scanner.png")) } }
     }
