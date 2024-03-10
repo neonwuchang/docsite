@@ -3,7 +3,7 @@ mod scope {
     use dioxus::prelude::*;
 
     // In dioxus 0.5, the scope is no longer passed as an argument to the function
-    fn app() -> Element {
+    fn App() -> Element {
         // Hooks, context, and spawn are now called directly
         use_hook(|| { /*...*/ });
         provide_context({ /*...*/ });
@@ -63,7 +63,7 @@ mod props {
 mod futures {
     use dioxus::prelude::*;
 
-    fn app() {
+    fn App() {
         // ANCHOR: futures
         // dependency1 and dependency2 must be Signal-like types like Signal, ReadOnlySignal, GlobalSignal, or another Resource
         use_resource(|| async move { /*use dependency1 and dependency2*/ });
@@ -74,7 +74,7 @@ mod futures {
 mod state {
     use dioxus::prelude::*;
 
-    fn app() -> Element {
+    fn App() -> Element {
         // ANCHOR: state
         // You can now use signals for local copy state, local clone state, and shared state with the same API
         let mut copy_state = use_signal(|| 0);
@@ -112,7 +112,7 @@ mod fermi {
     // Atoms and AtomRefs have been replaced with GlobalSignals
     static NAME: GlobalSignal<String> = Signal::global(|| "world".to_string());
 
-    fn app() -> Element {
+    fn App() -> Element {
         rsx! {
             // You can use global state directly without the use_read or use_set hooks
             div { "hello {NAME}!" }
