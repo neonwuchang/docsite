@@ -4,7 +4,7 @@ fn main() {
     launch(app);
 }
 
-fn app() -> Element {
+fn App() -> Element {
     let mut signal = use_signal_sync(|| 0);
 
     use_hook(|| {
