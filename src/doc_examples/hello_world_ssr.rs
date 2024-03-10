@@ -37,7 +37,7 @@ async fn app_endpoint() -> Html<String> {
 // ANCHOR: second_endpoint
 async fn second_app_endpoint() -> Html<String> {
     // create a component that renders a div with the text "hello world"
-    fn app() -> Element {
+    fn App() -> Element {
         rsx!( div { "hello world" } )
     }
     // create a VirtualDom with the app component
