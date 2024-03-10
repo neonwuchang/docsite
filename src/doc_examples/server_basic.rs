@@ -5,7 +5,7 @@ fn main() {
     launch(app)
 }
 
-fn app() -> Element {
+fn App() -> Element {
     let mut count = use_signal(|| 0);
 
     rsx! {
