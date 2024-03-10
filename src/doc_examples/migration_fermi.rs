@@ -5,7 +5,7 @@ static NAME: GlobalSignal<String> = Signal::global(|| "world".to_string());
 // Global signals work for copy and clone types in the same way
 static NAMES: GlobalSignal<Vec<String>> = Signal::global(|| vec!["world".to_string()]);
 
-fn app() -> Element {
+fn App() -> Element {
     // No need to use use_init_atom_root, use_set, or use_atom_ref. Just use the global signal directly
     rsx! {
         button { onclick: move |_| *NAME.write() = "reset name".to_string(), "reset name" }
