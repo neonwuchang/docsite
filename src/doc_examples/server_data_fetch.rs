@@ -3,10 +3,10 @@
 use dioxus::prelude::*;
 
 fn main() {
-    launch(app)
+    launch(App)
 }
 
-fn app() -> Element {
+fn App() -> Element {
     let mut count = use_resource(get_server_data);
 
     rsx! {"server data is {count.value():?}"}
